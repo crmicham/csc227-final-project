@@ -32,8 +32,8 @@ def main():
 
             if session_type == 2:
                 admin_session(course_list, admin_list)
-            except EOFError:
-                return
+        except EOFError:
+            return
 
 
 def init_lists(c_list, s_list, a_list):
