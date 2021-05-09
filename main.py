@@ -22,13 +22,17 @@ def main():
 
     init_lists(course_list, student_list, admin_list)
 
-    session_type = None
-    while session_type != 0:
+    counter = 0
+    while counter < 1
         try:
-            session_type = int(input("Enter 1 if you are a student, 2 if you are an administrator, 0 to quit: "))
+            print("*Simulating user input*")
+            print("Enter 1 if you are a student, 2 if you are an administrator, 0 to quit: 1")
+
+            session_type = 1
 
             if session_type == 1:
                 student_session(course_list, student_list)
+                counter += 1  #Added to avoid infinite loop
 
             if session_type == 2:
                 admin_session(course_list, admin_list)
@@ -66,8 +70,11 @@ def init_lists(c_list, s_list, a_list):
 
 def login(u_list):
 
-    id = str(input("Enter ID: "))
-    pin = str(input("Enter PIN: "))
+    print("*Simulating user input*")
+    print("Enter ID: 1001")
+    id = "1001"
+    print("Enter PIN: 111")
+    pin = "111"
 
     for person in u_list:
         if person.get_id() == id and person.get_pin() == pin:
@@ -87,16 +94,20 @@ def student_session(c_list, s_list):
 
         student = s_list[index] 
 
-        task = None
-        while task != 0:
+        counter = 0
+        while counter < 1:
 
-            task = int(input("Enter 1 to add course, 2 to drop course, 3 to see courses you have registered, 0 to exit: "))
+            print("*Simulating user input*")
+            print("Enter 1 to add course, 2 to drop course, 3 to see courses you have registered, 0 to exit: 2")
+
+            task = 2
 
             if task == 1:
                 student.add_course(c_list)
 
             if task == 2:
                 student.drop_course(c_list)
+                counter += 1
 
             if task == 3:
                 student.list_courses(c_list)

@@ -24,7 +24,9 @@ class Student(User):
 
     def drop_course(self, c_list):
 
-        d_course = (str(input("Enter course you want to drop: "))).upper()
+        print("*Simulating user input*")
+        print("Enter course you want to drop: CTI115")
+        d_course = "CTI115"
 
         for course in c_list:  
 
