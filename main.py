@@ -24,14 +24,16 @@ def main():
 
     session_type = None
     while session_type != 0:
+        try:
+            session_type = int(input("Enter 1 if you are a student, 2 if you are an administrator, 0 to quit: "))
 
-        session_type = int(input("Enter 1 if you are a student, 2 if you are an administrator, 0 to quit: "))
+            if session_type == 1:
+                student_session(course_list, student_list)
 
-        if session_type == 1:
-            student_session(course_list, student_list)
-
-        if session_type == 2:
-            admin_session(course_list, admin_list)
+            if session_type == 2:
+                admin_session(course_list, admin_list)
+            except EOFError:
+                return
 
 
 def init_lists(c_list, s_list, a_list):
