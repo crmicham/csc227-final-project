@@ -23,7 +23,7 @@ def main():
     init_lists(course_list, student_list, admin_list)
 
     counter = 0
-    while counter < 1
+    while counter < 1:
         try:
             print("*Simulating user input*")
             print("Enter 1 if you are a student, 2 if you are an administrator, 0 to quit: 1")
