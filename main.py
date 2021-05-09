@@ -1,7 +1,6 @@
 from course import Course
 from student import Student
 from admin import Admin
-from pynput.keyboard import Key, Controller
 
 
 # -------------------------------------------------------------------
@@ -23,16 +22,10 @@ def main():
 
     init_lists(course_list, student_list, admin_list)
 
-    keyboard = Controller()
-    key = "1"
-
     session_type = None
     while session_type != 0:
         try:
             session_type = int(input("Enter 1 if you are a student, 2 if you are an administrator, 0 to quit: "))
-
-            keyboard.press(key)
-            keyboard.release(key)
 
             if session_type == 1:
                 student_session(course_list, student_list)
